@@ -1,0 +1,32 @@
+<section class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+  <div *ngFor="let item of data"
+    class="w-full p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-transform duration-300 hover:scale-[1.03] group">
+
+    <!-- Ícone com cor de fundo específica -->
+    <div
+      [ngClass]="{
+        'bg-blue-500': item.icon === 'transaction',
+        'bg-green-500': item.icon === 'revenue',
+        'bg-red-500': item.icon === 'expense',
+        'bg-purple-500': item.icon === 'profit'
+      }"
+      class="flex items-center justify-center w-12 h-12 mb-4 rounded-full group-hover:shadow-md"
+    >
+      <img
+        [src]="'icons/' + item.icon + '.svg'"
+        [alt]="item.title"
+        class="w-6 h-6"
+      />
+    </div>
+
+    <!-- Título -->
+    <h2 class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-1">
+      {{ item.title }}
+    </h2>
+
+    <!-- Quantidade -->
+    <p class="text-2xl font-semibold text-gray-800">
+      {{ item.quantity }}
+    </p>
+  </div>
+</section>

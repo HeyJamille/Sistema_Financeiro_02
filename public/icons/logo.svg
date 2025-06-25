@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card w-5 h-5 text-white"
+  data-lov-id="src/components/AppSidebar.tsx:64:12" data-lov-name="CreditCard"
+  data-component-path="src/components/AppSidebar.tsx" data-component-line="64" data-component-file="AppSidebar.tsx"
+  data-component-name="CreditCard" data-component-content="%7B%22className%22%3A%22w-5%20h-5%20text-white%22%7D">
+  <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+  <line x1="2" x2="22" y1="10" y2="10"></line>
+</svg>

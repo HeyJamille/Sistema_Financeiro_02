@@ -1,0 +1,35 @@
+<section class="bg-white max-w-md p-6 rounded-xl shadow-md mt-5">
+  <h1 class="text-xl font-bold text-gray-800 mb-6">Transações Recentes</h1>
+
+  <div *ngFor="let item of data" class="flex justify-between items-start p-5 bg-gray-100 hover:bg-gray-200 rounded-lg mb-3">
+    <!-- Left side-->
+    <div class="flex flex-col gap-1">
+      <h2 class="text-md font-medium text-gray-700">{{ item.title }}</h2>
+
+      <div class="flex flex-wrap gap-4 text-sm text-gray-500">
+        <div class="flex items-center gap-1">
+          <img src="icons/calendar.svg" class="h-4 w-4" alt="Data" />
+          <span>{{ item.date }}</span>
+        </div>
+
+        <div class="flex items-center gap-1">
+          <img src="icons/type.svg" class="h-4 w-4" alt="Tipo" />
+          <span>{{ item.type }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="text-right">
+      <span
+        class="text-base font-bold"
+        [ngClass]="{
+          'text-green-600': item.value > 0,
+          'text-red-600': item.value < 0
+        }"
+      >
+        R$ {{ item.value | number:'1.2-2' }}
+      </span>
+    </div>
+  </div>
+</section>

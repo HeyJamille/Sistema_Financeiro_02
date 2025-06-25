@@ -1,3 +1,8 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+// Components
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+
+export const routes: Routes = [
+  { path: '', component: DashboardComponent }, // rota do dashboard
+];

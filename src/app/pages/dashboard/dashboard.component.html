@@ -1,0 +1,29 @@
+<article class="flex min-h-screen bg-blue-50">
+  <!-- Sidebar -->
+  <app-sidebar class="w-64 bg-white shadow-md" />
+
+  <!-- Conteúdo principal -->
+  <section class="flex-1 p-6">
+    <!-- Cabeçalho -->
+    <div class="flex flex-wrap items-center justify-between mb-6">
+      <div>
+        <h1 class="text-3xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent mb-1">
+          Dashboard Financeiro
+        </h1>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Gerencie suas finanças de forma inteligente e profissional
+        </p>
+      </div>
+
+      <!-- Ícone modo claro -->
+      <button class="p-2 rounded-full hover:bg-gray-200 transition"
+        (click)="changeTheme()">
+        <img [src]="isChanged ? 'icons/moon.svg' : 'icons/sun.svg'" class="h-9 w-9" />
+      </button>
+    </div>
+
+    <!-- Componentes -->
+    <app-cards />
+    <app-recent-transactions />
+  </section>
+</article>
